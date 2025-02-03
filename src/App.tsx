@@ -8,7 +8,7 @@ import Game from './components/Game';
 import { Button } from '@material-tailwind/react';
 
 function App() {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     const handleButtonClick = () => {
         signInAnonymously(auth);
@@ -22,7 +22,7 @@ function App() {
                 </>
             ) : (
                 <div className="mx-auto w-fit mt-8">
-                    <Button onClick={handleButtonClick} color="green">
+                    <Button onClick={handleButtonClick} color="green" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                         ゲームを開始する
                     </Button>
                 </div>

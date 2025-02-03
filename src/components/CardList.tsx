@@ -200,7 +200,7 @@ const CardList: React.FC<Props> = ({ roomId }) => {
                                 ))}
                             </div>
                             <div className="grid items-center px-4">
-                                <Button color="green" onClick={handleGameResetButtonClick}>
+                                <Button color="green" onClick={handleGameResetButtonClick} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                                     トップに戻る
                                 </Button>
                             </div>

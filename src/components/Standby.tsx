@@ -15,7 +15,7 @@ type Props = {
 };
 
 const Standby: React.FC<Props> = ({ roomName }) => {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [room, setRoom] = useState<RoomData>({
         id: '',
         roomName: '',
@@ -61,7 +61,7 @@ const Standby: React.FC<Props> = ({ roomName }) => {
                     )}
                     {room.userData.length > 1 && user?.uid === room.userData[0].id && (
                         <>
-                            <Button onClick={handleStartButtonClick}>ゲームスタート</Button>
+                            <Button onClick={handleStartButtonClick} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >ゲームスタート</Button>
                         </>
                     )}
                 </>

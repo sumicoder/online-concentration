@@ -88,7 +88,7 @@ const Game: React.FC = () => {
             <>
                 {standbyRoom ? (
                     <>
-                        <Button color="blue" onClick={() => dispatch(updateStandbyRoom(false))}>
+                        <Button color="blue" onClick={() => dispatch(updateStandbyRoom(false))} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                             戻る
                         </Button>
                         <Standby
@@ -101,33 +101,33 @@ const Game: React.FC = () => {
                         <p>※ルームは4つまでです</p>
                         {rooms.length < 4 && addRoom ? (
                             <>
-                                <Button color="blue" onClick={() => setAddRoom(!addRoom)}>
+                                <Button color="blue" onClick={() => setAddRoom(!addRoom)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                                     戻る
                                 </Button>
                                 <Heading label="ルームを作成する" />
-                                <Input value={roomName} onChange={(e) => setRoomName(e.target.value)} label="ルーム名を入力してください" />
-                                <Input value={roomPassword} onChange={(e) => setRoomPassword(e.target.value)} label="パスワード" type="password" />
-                                <Input value={name} onChange={(e) => setName(e.target.value)} label="プレイヤー名" />
-                                <Button color="blue" onClick={() => setRoom(name)}>
+                                <Input value={roomName} onChange={(e) => setRoomName(e.target.value)} label="ルーム名を入力してください" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined} />
+                                <Input value={roomPassword} onChange={(e) => setRoomPassword(e.target.value)} label="パスワード" type="password" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined}  />
+                                <Input value={name} onChange={(e) => setName(e.target.value)} label="プレイヤー名" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined}  />
+                                <Button color="blue" onClick={() => setRoom(name)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                                     ルームを作成する
                                 </Button>
                             </>
                         ) : (
                             <>
                                 {rooms.length < 4 && (
-                                    <Button color="blue" onClick={() => setAddRoom(!addRoom)}>
+                                    <Button color="blue" onClick={() => setAddRoom(!addRoom)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                                         ルームを作成する
                                     </Button>
                                 )}
                                 {participationRoomId ? (
                                     <>
-                                        <Input value={name} onChange={(e) => setName(e.target.value)} label="プレイヤー名" />
-                                        <Input value={roomPassword} onChange={(e) => setRoomPassword(e.target.value)} label="パスワード" type="password" />
-                                        <Button color="blue" onClick={() => handleParticipationButtonClick(roomPassword, name, participationRoomId)}>
+                                        <Input value={name} onChange={(e) => setName(e.target.value)} label="プレイヤー名"  onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined} />
+                                        <Input value={roomPassword} onChange={(e) => setRoomPassword(e.target.value)} label="パスワード" type="password"  onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined} />
+                                        <Button color="blue" onClick={() => handleParticipationButtonClick(roomPassword, name, participationRoomId)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                                             ゲームに参加する
                                         </Button>
                                         <div className="">
-                                            <Button color="blue" onClick={() => setParticipationRoomId('')}>
+                                            <Button color="blue" onClick={() => setParticipationRoomId('')} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                                                 戻る
                                             </Button>
                                         </div>
