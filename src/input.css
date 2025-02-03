@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card {
+        @apply grid place-items-center rounded p-4 text-white cursor-pointer border-2 border-black;
+        .number,
+        .color {
+            @apply opacity-0;
+        }
+        &.isFlipped {
+            .number,
+            .color {
+                @apply opacity-100;
+            }
+            &.red {
+                @apply bg-red-700;
+            }
+            &.black {
+                @apply bg-black;
+            }
+        }
+    }
+}
